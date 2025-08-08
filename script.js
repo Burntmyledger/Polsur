@@ -1,34 +1,15 @@
-document.addEventListener('DOMContentLoaded', ()=>{
-  // hamburger toggle
-  const hb = document.getElementById('hb');
-  const nav = document.querySelector('nav ul');
-  if(hb) hb.addEventListener('click', ()=> {
-    if(nav.style.display === 'flex') nav.style.display = '';
-    else nav.style.display = 'flex';
-  });
-
-  // reveal animation
-  const obs = new IntersectionObserver((entries, o)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){ e.target.classList.add('in-view'); o.unobserve(e.target); }
+document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * 10;
+        const rotateY = ((x - centerX) / centerX) * 10;
+        card.style.transform = `perspective(500px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
     });
-  }, {threshold:0.12});
-  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-
-  // smooth anchors
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click', (e)=>{
-      e.preventDefault();
-      const id = a.getAttribute('href');
-      document.querySelector(id).scrollIntoView({behavior:'smooth'});
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(500px) rotateX(0) rotateY(0) scale(1)';
     });
-  });
-
-  // buy now: open external link (placeholder)
-  document.querySelectorAll('.buy-now').forEach(btn=>{
-    btn.addEventListener('click', (e)=>{
-      const url = btn.dataset.href || btn.getAttribute('href');
-      if(url){ window.open(url, '_blank'); }
-    });
-  });
 });

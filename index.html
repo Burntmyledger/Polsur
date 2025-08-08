@@ -1,77 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Polsur</title>
-<link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polsur</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="bg-anim"></div>
-  <div class="bg-grain"></div>
+    <header>
+        <h1 class="glow">Polsur</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
 
-  <div class="container header reveal">
-    <div class="logo glow-strong">Polsur</div>
-    <button id="hb" class="hamburger">☰</button>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </nav>
-  </div>
+    <main>
+        <section class="products">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/250x250" alt="Product">
+                <h2 class="glow">R6 Premium GHub Lua</h2>
+                <p>$10.00 <del>$15.00</del></p>
+                <p>In Stock</p>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/250x250" alt="Product">
+                <h2 class="glow">Another Tool</h2>
+                <p>$20.00</p>
+                <p>In Stock</p>
+            </div>
+        </section>
+    </main>
 
-  <main class="container">
-    <section class="hero reveal" id="home">
-      <h1 class="glow-strong">Polsur — Digital Made Simple</h1>
-      <p class="sub lead">Sleek, minimalist tools and services crafted for focused gamers. Fast delivery, secure checkout, no nonsense.</p>
-      <p style="margin-top:18px;"><a class="btn" href="products.html">Shop Now</a></p>
-    </section>
-
-    <section class="section reveal" id="featured">
-      <div class="card">
-        <h2 class="glow">Featured Products</h2>
-        <div class="grid" style="margin-top:14px;">
-          <div class="product card reveal">
-            <div class="title">Product One</div>
-            <div class="desc link-muted">High-performance tool. Instant delivery.</div>
-            <div class="price">$5.00</div>
-            <a class="btn buy-now" data-href="https://sell.app/placeholder-product-1">Buy with BTC</a>
-            <a href="product-one.html" class="link-muted">Details →</a>
-          </div>
-          <div class="product card reveal">
-            <div class="title">Product Two</div>
-            <div class="desc link-muted">Premium utility. Small footprint.</div>
-            <div class="price">$8.00</div>
-            <a class="btn buy-now" data-href="https://sell.app/placeholder-product-2">Buy with BTC</a>
-            <a href="product-two.html" class="link-muted">Details →</a>
-          </div>
-          <div class="product card reveal">
-            <div class="title">Product Three</div>
-            <div class="desc link-muted">Exclusive content, limited release.</div>
-            <div class="price">$12.00</div>
-            <a class="btn buy-now" data-href="https://sell.app/placeholder-product-3">Buy with BTC</a>
-            <a href="product-three.html" class="link-muted">Details →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section reveal" id="about-preview">
-      <div class="card">
-        <h2>About</h2>
-        <p class="link-muted">Polsur is a one‑man operation built to deliver real results for gamers who want more than the standard experience. <a href="about.html">Read more →</a></p>
-      </div>
-    </section>
-
-    <footer class="footer reveal">
-      &copy; 2025 Polsur — built with care.
-    </footer>
-  </main>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
