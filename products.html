@@ -1,32 +1,59 @@
-
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Polsur</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Products — Polsur</title>
+<link rel="stylesheet" href="style.css"/>
 </head>
-
 <body>
-
-<nav>
-    <ul>
+  <div class="bg-anim"></div>
+  <div class="bg-grain"></div>
+  <div class="container header reveal">
+    <div class="logo glow-strong">Polsur</div>
+    <button id="hb" class="hamburger">☰</button>
+    <nav>
+      <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li style="float:right"><a href="#">Login / Register</a></li>
-    </ul>
-</nav>
+      </ul>
+    </nav>
+  </div>
 
-<section>
-    <h1>Our Products</h1>
-    <div>
-        <h2>Example Product</h2>
-        <p>Instant delivery digital item.</p>
-        <a href="https://sell.app" target="_blank">Buy Now with BTC</a>
-    </div>
-</section>
+  <main class="container">
+    <section class="hero reveal">
+      <h1 class="glow-strong">Products</h1>
+      <p class="lead link-muted">Click a product for details or buy now via Bitcoin.</p>
+    </section>
+
+    <section class="section reveal">
+      <div class="grid">
+        <article class="card product reveal">
+          <h3 class="title">Product One</h3>
+          <p class="link-muted">Compact tool — ideal for quick setups.</p>
+          <div class="price">$5.00</div>
+          <p style="margin-top:8px;"><a class="btn buy-now" data-href="https://sell.app/placeholder-product-1">Buy with BTC</a></p>
+        </article>
+        <article class="card product reveal">
+          <h3 class="title">Product Two</h3>
+          <p class="link-muted">Premium utility — extra features.</p>
+          <div class="price">$8.00</div>
+          <p style="margin-top:8px;"><a class="btn buy-now" data-href="https://sell.app/placeholder-product-2">Buy with BTC</a></p>
+        </article>
+        <article class="card product reveal">
+          <h3 class="title">Product Three</h3>
+          <p class="link-muted">Exclusive — limited release.</p>
+          <div class="price">$12.00</div>
+          <p style="margin-top:8px;"><a class="btn buy-now" data-href="https://sell.app/placeholder-product-3">Buy with BTC</a></p>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer reveal">Digital checkout handled by third-party processors. You will be redirected to pay.</footer>
+  </main>
+
+<script src="script.js"></script>
 </body>
 </html>

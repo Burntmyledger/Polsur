@@ -1,29 +1,12 @@
-
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <title>Polsur</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Contact — Polsur</title><link rel="stylesheet" href="style.css"/></head>
 <body>
-
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li style="float:right"><a href="#">Login / Register</a></li>
-    </ul>
-</nav>
-
-<section>
-    <h1>Contact Us</h1>
-    <p>Email: contact@polsur.com (placeholder)</p>
-    <p>Use the contact form below (coming soon!)</p>
-</section>
-</body>
-</html>
+  <div class="bg-anim"></div><div class="bg-grain"></div>
+  <div class="container header reveal"><div class="logo glow-strong">Polsur</div><button id="hb" class="hamburger">☰</button><nav><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="products.html">Products</a></li></ul></nav></div>
+  <main class="container">
+    <section class="hero reveal"><h1 class="glow-strong">Contact</h1><p class="lead link-muted">Have a question? Send a message below or join our Discord.</p></section>
+    <section class="section reveal"><div class="card"><form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST"><label style="display:block;margin-bottom:8px;color:var(--muted)">Name<br/><input name="name" type="text" required style="width:100%;padding:8px;margin-top:6px;border-radius:6px;background:#0b0b0b;border:1px solid rgba(255,255,255,0.04);color:#fff"/></label><label style="display:block;margin-bottom:8px;color:var(--muted)">Email<br/><input name="email" type="email" required style="width:100%;padding:8px;margin-top:6px;border-radius:6px;background:#0b0b0b;border:1px solid rgba(255,255,255,0.04);color:#fff"/></label><label style="display:block;margin-bottom:8px;color:var(--muted)">Message<br/><textarea name="message" required style="width:100%;padding:8px;margin-top:6px;border-radius:6px;background:#0b0b0b;border:1px solid rgba(255,255,255,0.04);color:#fff;min-height:120px"></textarea></label><p style="margin-top:12px"><button class="btn" type="submit">Send Message</button></p></form><p class="link-muted">Replace the Formspree action URL with your endpoint after creating a free account at formspree.io.</p></div></section>
+    <footer class="footer reveal">Or join our Discord: <a class="link-muted" href="https://discord.com/" target="_blank">Invite</a></footer>
+  </main>
+<script src="script.js"></script></body></html>
