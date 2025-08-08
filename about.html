@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About | Polsur</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <h1>About Polsur</h1>
+      <p class="lead">Polsur is a one‑man operation built to deliver real results for gamers who want more than the standard experience.</p>
+    </header>
+
+    <section class="card reveal">
+      <h2>Who We Are</h2>
+      <p>I create and sell specialized tools, enhancements, and services for dedicated players — always focused on performance, reliability, and clarity. No fluff. No filler. Just the good stuff.</p>
+    </section>
+
+    <section class="card reveal">
+      <h2>Mission</h2>
+      <p>My mission is simple: provide both accessible and premium gaming utilities and services that give players an edge. From utility tools to advanced options, I aim to deliver solutions that fit your needs and your budget.</p>
+    </section>
+
+    <section class="card reveal">
+      <h2>What We Offer</h2>
+      <p>Polsur is currently in early development. While no public products are available yet, I’m building a lineup of tools and premium features designed to improve performance, streamline workflows, and unlock new possibilities.</p>
+    </section>
+
+    <section class="card reveal">
+      <h2>Future Vision</h2>
+      <p>With community support, Polsur can grow into higher-quality offerings, exclusive services, reseller partnerships, and curated bundles. The goal is to evolve from a one-person project into a trusted hub for advanced, game‑focused utilities.</p>
+    </section>
+
+    <footer class="footer">
+      <p>Want to get updates? Join our Discord or check the Products page for announcements.</p>
+    </footer>
+  </main>
+
+  <script>
+    // Simple intersection observer for reveal animations
+    document.addEventListener('DOMContentLoaded', function () {
+      const reveals = document.querySelectorAll('.reveal');
+      const obs = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach(r => obs.observe(r));
+    });
+  </script>
+</body>
+</html>
