@@ -1,34 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polsur</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
-</head>
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Polsur</title><link rel="stylesheet" href="styles.css"/></head>
 <body>
-    <header>
-        <h1 class="glow">Polsur</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Products</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <section class="products">
-            <div class="product-card">
-                <h2 class="glow">Product 1</h2>
-                <p>High-quality third-party tool.</p>
-            </div>
-            <div class="product-card">
-                <h2 class="glow">Product 2</h2>
-                <p>Premium gaming enhancement.</p>
-            </div>
-        </section>
-    </main>
-    <script src="script.js"></script>
+<div class="bg-overlay"></div>
+<header class="header container reveal"><div class="logo">Polsur</div><nav><ul><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav></header>
+<main class="container">
+  <section class="hero reveal">
+    <h1 class="glow-heading">Polsur — Digital Made Simple</h1>
+    <p class="lead">Sleek tools and services for focused gamers. Fast delivery, secure checkout, no nonsense.</p>
+    <p style="margin-top:18px;"><a class="btn" href="products.html">Shop Now</a></p>
+  </section>
+
+  <section class="section reveal card">
+    <h2 class="glow-heading">Featured</h2>
+    <div class="grid">
+      <div class="product reveal">
+        <div class="product-card">
+          <h3>Product One</h3><p class="desc">Compact tool — ideal for quick setups.</p><div class="price">$5.00</div><p style="margin-top:10px;"><a class="btn" href="product-one.html">Details</a></p>
+        </div>
+      </div>
+      <div class="product reveal">
+        <div class="product-card">
+          <h3>Product Two</h3><p class="desc">Premium utility — extra features.</p><div class="price">$8.00</div><p style="margin-top:10px;"><a class="btn" href="product-two.html">Details</a></p>
+        </div>
+      </div>
+      <div class="product reveal">
+        <div class="product-card">
+          <h3>Product Three</h3><p class="desc">Exclusive content, limited release.</p><div class="price">$12.00</div><p style="margin-top:10px;"><a class="btn" href="product-three.html">Details</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer reveal">&copy; 2025 Polsur</footer>
+</main>
+<script src="script.js"></script>
 </body>
 </html>
