@@ -1,31 +1,30 @@
 
-// Polsur common script - reveal observer + product tilt
 document.addEventListener('DOMContentLoaded', ()=>{
 
-  // reveal on scroll (perf friendly)
+  // reveal on scroll
   const observer = new IntersectionObserver((entries, obs)=>{
     entries.forEach(e=>{
       if(e.isIntersecting){ e.target.classList.add('in-view'); obs.unobserve(e.target); }
     });
-  }, {threshold: 0.12});
+  }, {threshold:0.12});
 
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
   // product tilt follow effect (optimized)
-  document.querySelectorAll('.product-card').forEach(card => {
+  document.querySelectorAll('.product-card').forEach(card=>{
     let rect = null;
     let raf = null;
 
-    const onMove = (e) => {
+    const onMove = (e)=>{
       if(!rect) rect = card.getBoundingClientRect();
       const x = (e.clientX - rect.left) - rect.width/2;
       const y = (e.clientY - rect.top) - rect.height/2;
-      const rx = (-y / (rect.height/2)) * 8; // rotateX
-      const ry = (x / (rect.width/2)) * 8; // rotateY
-      // set transform via rAF for performance
+      const rx = (-y / (rect.height/2)) * 6; // rotateX
+      const ry = (x / (rect.width/2)) * 6; // rotateY
+
       if(raf) cancelAnimationFrame(raf);
       raf = requestAnimationFrame(()=>{
-        card.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(18px) scale(1.03)`;
+        card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(28px) scale(1.05)`;
       });
     };
 
