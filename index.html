@@ -1,39 +1,83 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polsur</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(-45deg, #0f0f0f, #1c1c1c, #2a2a2a, #0a0a0a);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+        }
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+        header {
+            padding: 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: text-shadow 0.3s ease;
+        }
+        header nav a:hover {
+            text-shadow: 0 0 10px white;
+        }
+        h1, h2, h3 {
+            font-weight: bold;
+            text-shadow: 0 0 10px white;
+            margin-bottom: 20px;
+        }
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        /* Product Card Styles */
+        .product {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            transform: perspective(500px) translateZ(0);
+            transition: transform 0.2s ease;
+        }
+        .product:hover {
+            transform: perspective(500px) translateZ(20px) scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1 class="glow">Polsur</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Products</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
-
-    <main>
-        <section class="products">
-            <div class="product-card">
-                <img src="https://via.placeholder.com/250x250" alt="Product">
-                <h2 class="glow">R6 Premium GHub Lua</h2>
-                <p>$10.00 <del>$15.00</del></p>
-                <p>In Stock</p>
-            </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/250x250" alt="Product">
-                <h2 class="glow">Another Tool</h2>
-                <p>$20.00</p>
-                <p>In Stock</p>
-            </div>
-        </section>
-    </main>
-
-    <script src="script.js"></script>
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+<main>
+<h1>Welcome to Polsur</h1><p>Your hub for third-party gaming tools and services.</p>
+</main>
 </body>
 </html>

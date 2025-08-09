@@ -1,59 +1,83 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Products — Polsur</title>
-<link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polsur</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(-45deg, #0f0f0f, #1c1c1c, #2a2a2a, #0a0a0a);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+        }
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+        header {
+            padding: 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: text-shadow 0.3s ease;
+        }
+        header nav a:hover {
+            text-shadow: 0 0 10px white;
+        }
+        h1, h2, h3 {
+            font-weight: bold;
+            text-shadow: 0 0 10px white;
+            margin-bottom: 20px;
+        }
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        /* Product Card Styles */
+        .product {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            transform: perspective(500px) translateZ(0);
+            transition: transform 0.2s ease;
+        }
+        .product:hover {
+            transform: perspective(500px) translateZ(20px) scale(1.05);
+        }
+    </style>
 </head>
 <body>
-  <div class="bg-anim"></div>
-  <div class="bg-grain"></div>
-  <div class="container header reveal">
-    <div class="logo glow-strong">Polsur</div>
-    <button id="hb" class="hamburger">☰</button>
+<header>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
     </nav>
-  </div>
-
-  <main class="container">
-    <section class="hero reveal">
-      <h1 class="glow-strong">Products</h1>
-      <p class="lead link-muted">Click a product for details or buy now via Bitcoin.</p>
-    </section>
-
-    <section class="section reveal">
-      <div class="grid">
-        <article class="card product reveal">
-          <h3 class="title">Product One</h3>
-          <p class="link-muted">Compact tool — ideal for quick setups.</p>
-          <div class="price">$5.00</div>
-          <p style="margin-top:8px;"><a class="btn buy-now" data-href="https://sell.app/placeholder-product-1">Buy with BTC</a></p>
-        </article>
-        <article class="card product reveal">
-          <h3 class="title">Product Two</h3>
-          <p class="link-muted">Premium utility — extra features.</p>
-          <div class="price">$8.00</div>
-          <p style="margin-top:8px;"><a class="btn buy-now" data-href="https://sell.app/placeholder-product-2">Buy with BTC</a></p>
-        </article>
-        <article class="card product reveal">
-          <h3 class="title">Product Three</h3>
-          <p class="link-muted">Exclusive — limited release.</p>
-          <div class="price">$12.00</div>
-          <p style="margin-top:8px;"><a class="btn buy-now" data-href="https://sell.app/placeholder-product-3">Buy with BTC</a></p>
-        </article>
-      </div>
-    </section>
-
-    <footer class="footer reveal">Digital checkout handled by third-party processors. You will be redirected to pay.</footer>
-  </main>
-
-<script src="script.js"></script>
+</header>
+<main>
+<h1>Products</h1><div class='product'><h2>Example Product</h2><p>Coming soon...</p></div>
+</main>
 </body>
 </html>
